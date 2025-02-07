@@ -1,6 +1,11 @@
 syntax = "proto3";
 option java_multiple_files = true;
-package com.baeldung.grpc;
+option java_outer_classname = "HelloServiceProto";
+package wood.mike.hello;
+
+service HelloService {
+    rpc hello(HelloRequest) returns (HelloResponse);
+}
 
 message HelloRequest {
     string firstName = 1;
@@ -9,8 +14,4 @@ message HelloRequest {
 
 message HelloResponse {
     string greeting = 1;
-}
-
-service HelloService {
-    rpc hello(HelloRequest) returns (HelloResponse);
 }
