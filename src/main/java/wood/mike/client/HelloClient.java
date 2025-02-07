@@ -6,7 +6,7 @@ import wood.mike.hello.HelloRequest;
 import wood.mike.hello.HelloResponse;
 import wood.mike.hello.HelloServiceGrpc;
 
-public class HelloGrpcClient {
+public class HelloClient {
     public static void main(String[] args) {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 10980)
                 .usePlaintext()

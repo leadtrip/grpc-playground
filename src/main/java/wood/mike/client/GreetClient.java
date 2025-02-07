@@ -13,7 +13,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 
-public class GreetGrpcClient {
+public class GreetClient {
 
     private static final String HOST = "localhost";
     private static final int PORT = 50051;
@@ -23,7 +23,7 @@ public class GreetGrpcClient {
     private final ManagedChannel channel;
     private final Scanner scanner;
 
-    public GreetGrpcClient() {
+    public GreetClient() {
         channel = ManagedChannelBuilder.forAddress(HOST, PORT)
                 .usePlaintext()
                 .build();
@@ -146,6 +146,6 @@ public class GreetGrpcClient {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        new GreetGrpcClient().run();
+        new GreetClient().run();
     }
 }
